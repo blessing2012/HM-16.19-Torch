@@ -46,6 +46,8 @@
 #include "TLibCommon/AccessUnit.h"
 #include "TAppEncCfg.h"
 
+#include "TLibCommon/TComCNNFilter.h"
+
 //! \ingroup TAppEncoder
 //! \{
 
