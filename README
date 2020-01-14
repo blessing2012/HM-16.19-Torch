@@ -6,3 +6,17 @@ The software has been jointly developed by the ITU-T Video Coding Experts Group 
 
 A software manual, which contains usage instructions, can be found in the "doc" subdirectory of this software package.
 
+## How to run the code on Linux
+```Bash
+cd build/linux
+make -j8
+```
+
+## LibTorch MakeFile
+In build/linux/common/makefile.base, add those lines to config libtorch:
+```cpp
+LIBTORCH = path/to/libtorch
+
+CPPFLAGS += -I$(LIBTORCH)/include -I$(LIBTORCH)/include/torch/csrc/api/include 
+DYN_LIBS += $(LIBTORCH)/lib/libtorch.so $(LIBTORCH)/lib/libc10.so
+```
